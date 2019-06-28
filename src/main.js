@@ -1,14 +1,14 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import store from "./store";
+import store from "./store/store";
 import GAuth from "vue-google-oauth2";
 
 Vue.config.productionTip = false;
 
 const gauthOption = {
   clientId:
-    "306467913704-t29amabreflrk5h20tuv1bu0g7lr5hsi.apps.googleusercontent.com",
+    "159241832920-fsmcs20gjt038patdsah8tqh2e59ni01.apps.googleusercontent.com",
   scope: "profile email",
   prompt: "select_account"
 };
