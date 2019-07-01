@@ -1,8 +1,5 @@
 <template>
-  <div class="hello">
-    {{ user }}
-    <button @click="setUser">setUser</button>
-  </div>
+  <div class="hello">{{ user }}</div>
 </template>
 
 <script>

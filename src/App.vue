@@ -5,8 +5,28 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
+    <Loader v-if="isLoading"/>
+    <LoginWindow v-if="!isLoggedIn"/>
   </div>
 </template>
+
+<script>
+import Loader from "@/components/Loader.vue";
+import LoginWindow from "@/components/LoginWindow.vue";
+import { mapGetters } from "vuex";
+export default {
+   components: {
+    Loader,
+    LoginWindow
+  },
+  computed: {
+    ...mapGetters({
+      isLoading: "isLoading",
+      isLoggedIn: "isLoggedIn"
+    })
+  }
+}
+</script>
 
 <style>
 #app {
