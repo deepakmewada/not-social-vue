@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Navbar />
     <router-view />
     <Loader v-if="isLoading"/>
     <LoginWindow v-if="!isLoggedIn"/>
@@ -13,11 +10,14 @@
 <script>
 import Loader from "@/components/Loader.vue";
 import LoginWindow from "@/components/LoginWindow.vue";
+import Navbar from "@/components/Navbar.vue";
+
 import { mapGetters } from "vuex";
 export default {
    components: {
     Loader,
-    LoginWindow
+    LoginWindow,
+    Navbar
   },
   computed: {
     ...mapGetters({

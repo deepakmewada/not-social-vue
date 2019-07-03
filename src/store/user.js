@@ -1,7 +1,7 @@
 export default {
     state: {
-        user: {},
-        isLoggedIn: false
+        user: {name: 'Deepak'},
+        isLoggedIn: true
       },
       getters:{
         getUser(state){

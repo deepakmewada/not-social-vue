@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">{{ user }}</div>
+
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
     axios.defaults.headers.post["Content-type"] = "application/x-www-form-urlencoded";
     axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
     axios({
-      url: "http://localhost:8080/api/replies/16",
+      url: "https://not-social.herokuapp.com/test/greet",
       headers: {"Authorization":"Token eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMyIsIm5hbWUiOiJ1c2VyIiwicm9sZSI6IltdIiwiZXhwIjoxNTYxODkwNjM4fQ.WtT7923CzLyo-pcBTBHgnbcZ9uSc9hkIrYx2hJGfL4FkopbqhS6YYtnVHPgQGCABY17AXCl88W2K9x3usRsEIQ"}
     })
       .then(res => console.log(res.data))
